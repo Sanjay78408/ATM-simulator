@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>NovaBank ATM</title>
 
-    <link rel="stylesheet" href="atm.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./atm.css">
 
+    <!-- Font Awesome -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -16,29 +19,35 @@
 
 <body>
 
-    <!-- ================= LOGIN ================= -->
+    <!-- LOGIN PAGE -->
 
     <div id="loginPage" class="page">
 
         <div class="login-container">
 
             <div class="brand">
+
                 <div class="logo">
                     <i class="fa-solid fa-building-columns"></i>
                 </div>
 
                 <h1>NOVABANK</h1>
                 <p>Smart ATM Banking</p>
+
             </div>
+
 
             <div class="login-card">
 
                 <h2>Welcome Back</h2>
+
                 <p class="login-subtitle">
                     Securely access your account
                 </p>
 
+
                 <div class="input-box">
+
                     <i class="fa-solid fa-credit-card"></i>
 
                     <input
@@ -47,9 +56,12 @@
                         placeholder="Account Number"
                         maxlength="12"
                     >
+
                 </div>
 
+
                 <div class="input-box">
+
                     <i class="fa-solid fa-lock"></i>
 
                     <input
@@ -63,18 +75,31 @@
                         class="fa-solid fa-eye toggle-pin"
                         onclick="togglePin()"
                     ></i>
+
                 </div>
 
-                <button class="primary-btn" onclick="login()">
+
+                <button
+                    class="primary-btn"
+                    onclick="login()"
+                >
                     <i class="fa-solid fa-right-to-bracket"></i>
                     Login
                 </button>
 
-                <p id="loginMessage" class="error-message"></p>
+
+                <p
+                    id="loginMessage"
+                    class="error-message"
+                ></p>
+
 
                 <div class="security-info">
+
                     <i class="fa-solid fa-shield-halved"></i>
+
                     Your banking session is protected
+
                 </div>
 
             </div>
@@ -84,9 +109,12 @@
     </div>
 
 
-    <!-- ================= DASHBOARD ================= -->
+    <!-- DASHBOARD -->
 
-    <div id="dashboardPage" class="page hidden">
+    <div
+        id="dashboardPage"
+        class="page hidden"
+    >
 
         <header>
 
@@ -97,28 +125,40 @@
                 </div>
 
                 <div>
+
                     <h2>NOVABANK</h2>
-                    <span>ATM Banking</span>
+
+                    <span>
+                        ATM Banking
+                    </span>
+
                 </div>
 
             </div>
 
+
             <div class="header-right">
 
                 <div class="user-info">
+
                     <i class="fa-solid fa-user"></i>
 
                     <span id="welcomeUser">
                         Welcome
                     </span>
+
                 </div>
+
 
                 <button
                     class="logout-btn"
                     onclick="logout()"
                 >
+
                     <i class="fa-solid fa-power-off"></i>
+
                     Logout
+
                 </button>
 
             </div>
@@ -142,13 +182,18 @@
 
                     </div>
 
+
                     <div class="chip">
+
                         <i class="fa-solid fa-microchip"></i>
+
                     </div>
+
 
                     <div class="account-label">
                         ACCOUNT NUMBER
                     </div>
+
 
                     <div
                         class="account-display"
@@ -157,18 +202,32 @@
                         **** **** ****
                     </div>
 
+
                     <div class="card-bottom">
 
                         <div>
-                            <small>ACCOUNT HOLDER</small>
+
+                            <small>
+                                ACCOUNT HOLDER
+                            </small>
+
                             <strong id="displayName">
                                 CUSTOMER
                             </strong>
+
                         </div>
 
+
                         <div>
-                            <small>TYPE</small>
-                            <strong>SAVINGS</strong>
+
+                            <small>
+                                TYPE
+                            </small>
+
+                            <strong>
+                                SAVINGS
+                            </strong>
+
                         </div>
 
                     </div>
@@ -176,23 +235,34 @@
                 </div>
 
 
+                <!-- BALANCE -->
+
                 <div class="balance-card">
 
                     <div class="balance-header">
 
-                        <span>Available Balance</span>
+                        <span>
+                            Available Balance
+                        </span>
 
                         <i class="fa-solid fa-wallet"></i>
 
                     </div>
 
+
                     <h1 id="balance">
                         ₹10,000.00
                     </h1>
 
+
                     <p>
-                        <i class="fa-solid fa-circle-check"></i>
+
+                        <i
+                            class="fa-solid fa-circle-check"
+                        ></i>
+
                         Account active
+
                     </p>
 
                 </div>
@@ -206,7 +276,9 @@
 
                 <div class="section-title">
 
-                    <h2>Quick Actions</h2>
+                    <h2>
+                        Quick Actions
+                    </h2>
 
                     <span>
                         Choose a banking service
@@ -221,12 +293,21 @@
                         class="action-card"
                         onclick="showBalance()"
                     >
+
                         <div class="action-icon">
+
                             <i class="fa-solid fa-wallet"></i>
+
                         </div>
 
-                        <h3>Balance</h3>
-                        <p>Check available balance</p>
+                        <h3>
+                            Balance
+                        </h3>
+
+                        <p>
+                            Check available balance
+                        </p>
+
                     </button>
 
 
@@ -234,12 +315,21 @@
                         class="action-card"
                         onclick="openTransaction('deposit')"
                     >
+
                         <div class="action-icon deposit">
+
                             <i class="fa-solid fa-arrow-down"></i>
+
                         </div>
 
-                        <h3>Deposit</h3>
-                        <p>Add money to account</p>
+                        <h3>
+                            Deposit
+                        </h3>
+
+                        <p>
+                            Add money to account
+                        </p>
+
                     </button>
 
 
@@ -247,12 +337,21 @@
                         class="action-card"
                         onclick="openTransaction('withdraw')"
                     >
+
                         <div class="action-icon withdraw">
+
                             <i class="fa-solid fa-arrow-up"></i>
+
                         </div>
 
-                        <h3>Withdraw</h3>
-                        <p>Withdraw cash</p>
+                        <h3>
+                            Withdraw
+                        </h3>
+
+                        <p>
+                            Withdraw cash
+                        </p>
+
                     </button>
 
 
@@ -260,12 +359,23 @@
                         class="action-card"
                         onclick="showTransactions()"
                     >
+
                         <div class="action-icon history">
-                            <i class="fa-solid fa-clock-rotate-left"></i>
+
+                            <i
+                                class="fa-solid fa-clock-rotate-left"
+                            ></i>
+
                         </div>
 
-                        <h3>Transactions</h3>
-                        <p>View transaction history</p>
+                        <h3>
+                            Transactions
+                        </h3>
+
+                        <p>
+                            View transaction history
+                        </p>
+
                     </button>
 
 
@@ -273,12 +383,23 @@
                         class="action-card"
                         onclick="showMiniStatement()"
                     >
+
                         <div class="action-icon statement">
-                            <i class="fa-solid fa-file-invoice"></i>
+
+                            <i
+                                class="fa-solid fa-file-invoice"
+                            ></i>
+
                         </div>
 
-                        <h3>Mini Statement</h3>
-                        <p>View recent transactions</p>
+                        <h3>
+                            Mini Statement
+                        </h3>
+
+                        <p>
+                            View recent transactions
+                        </p>
+
                     </button>
 
 
@@ -286,12 +407,21 @@
                         class="action-card"
                         onclick="openChangePin()"
                     >
+
                         <div class="action-icon pin">
+
                             <i class="fa-solid fa-key"></i>
+
                         </div>
 
-                        <h3>Change PIN</h3>
-                        <p>Update your ATM PIN</p>
+                        <h3>
+                            Change PIN
+                        </h3>
+
+                        <p>
+                            Update your ATM PIN
+                        </p>
+
                     </button>
 
                 </div>
@@ -299,39 +429,66 @@
             </section>
 
 
-            <!-- ADVANCED OPTIONS -->
+            <!-- ADVANCED SERVICES -->
 
             <section class="advanced">
 
                 <div class="section-title">
 
-                    <h2>Advanced Services</h2>
+                    <h2>
+                        Advanced Services
+                    </h2>
 
-                    <span>More banking options</span>
+                    <span>
+                        More banking options
+                    </span>
 
                 </div>
 
 
                 <div class="advanced-grid">
 
-                    <button onclick="showAccountDetails()">
+                    <button
+                        onclick="showAccountDetails()"
+                    >
+
                         <i class="fa-solid fa-user"></i>
+
                         Account Details
+
                     </button>
 
-                    <button onclick="showQuickWithdraw()">
+
+                    <button
+                        onclick="showQuickWithdraw()"
+                    >
+
                         <i class="fa-solid fa-bolt"></i>
+
                         Quick Cash
+
                     </button>
 
-                    <button onclick="showSecurity()">
+
+                    <button
+                        onclick="showSecurity()"
+                    >
+
                         <i class="fa-solid fa-shield"></i>
+
                         Security
+
                     </button>
 
-                    <button onclick="contactBank()">
+
+                    <button
+                        onclick="contactBank()"
+                    >
+
                         <i class="fa-solid fa-headset"></i>
+
                         Help & Support
+
                     </button>
 
                 </div>
@@ -352,11 +509,17 @@
                         Banking Service
                     </h2>
 
-                    <button onclick="closeOutput()">
+
+                    <button
+                        onclick="closeOutput()"
+                    >
+
                         <i class="fa-solid fa-xmark"></i>
+
                     </button>
 
                 </div>
+
 
                 <div id="outputContent"></div>
 
@@ -367,9 +530,12 @@
     </div>
 
 
-    <!-- ================= MODAL ================= -->
+    <!-- MODAL -->
 
-    <div id="modal" class="modal hidden">
+    <div
+        id="modal"
+        class="modal hidden"
+    >
 
         <div class="modal-card">
 
@@ -377,8 +543,11 @@
                 class="close-modal"
                 onclick="closeModal()"
             >
+
                 <i class="fa-solid fa-xmark"></i>
+
             </button>
+
 
             <div id="modalContent"></div>
 
@@ -387,7 +556,9 @@
     </div>
 
 
-    <script src="atm.js"></script>
+    <!-- JAVASCRIPT -->
+    <script src="./atm.js"></script>
 
 </body>
+
 </html>
